@@ -1,12 +1,19 @@
+## The What
+Evaluations on The ARC Challenge Benchmark With The Inspect Library
+- The project analyses the performance of GPT models on the ARC challenge bench, constructing an Inspect eval pipeline, complete with custom solvers and scorers for multiple eval paradigms.
+- Logprobs extraction from model responses to calculate confidence scores and further logprobs-based scoring are implemented
+
+----------
 ## Overview
 ### Part A
 - Setup - Normal benchmark - test/validation sets - Samples - inbuilt solvers and scorers
 ### Part B
 - EvalSet - 2 models - Comparison - Analysis of Logs, Results 
 ### Part C
+- Currently, the inspect ai library does not support returning logprobs directly from model calls.
 - LogProbs integration - custom solvers and scorers for different metrics(accuracy, stderr, mean over answers, confidence, topk etc), plots
 ### Part D
-- If you allow for multiple answers - the models usually end up choosing more than is necessary. Even thought they get the right answer in a single answer setting.
+- If you allow for multiple answers, the models usually end up choosing more than is necessary. Even though they get the right answer in a single answer setting.
 1. Top logprobs for multi answers - are the 'just right' answers in top k?
 2. Will letting the model know that there will be negative marking, ie., penalty by avg help?
 
@@ -45,7 +52,7 @@
 3. The topk_winner scores, on the other hand, with just k=2, sees mini score a full accuracy = 1 and nano a close second with accuracy = 0.996 !
 (ie., given just a very minute increase in margin for error - a second chance, essentially - the models generally get everything right?!)
 4. Confidence is calculated as the linear probability from the logprobs of top-k answers. Top-conf., ie., the model's confidence in its top choice is at a 99% for mini and 97% for nano! 
-5. Whereas the confidence in the actual, ground-truth target answer is a 90% and 87% for mini and nano respectively. This is because, well, they are generally confident of their top choices, regardless of whether they are right or wrong. So, when they get some questions wrong and the target differs, their confidence in their wrong answer remains - thus the lower scores.
+5. Whereas the confidence in the actual, ground-truth target answer is a 90% and 87% for mini and nano, respectively. This is because, well, they are generally confident of their top choices, regardless of whether they are right or wrong. So, when they get some questions wrong and the target differs, their confidence in their wrong answer remains - thus the lower scores.
 
 ### D. MC-MCQ - Multi-correct Answers
 
