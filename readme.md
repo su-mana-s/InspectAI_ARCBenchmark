@@ -1,5 +1,4 @@
 ## Overview
-Insights/Analyses are strewn throught the nb.
 ### Part A
 - Setup - Normal benchmark - test/validation sets - Samples - inbuilt solvers and scorers
 ### Part B
@@ -10,7 +9,6 @@ Insights/Analyses are strewn throught the nb.
 - If you allow for multiple answers - the models usually end up choosing more than is necessary. Even thought they get the right answer in a single answer setting.
 1. Top logprobs for multi answers - are the 'just right' answers in top k?
 2. Will letting the model know that there will be negative marking, ie., penalty by avg help?
-(Probably not the right place to put this - but, can I just say that the ARENA nbs are absolutely delightful?! I have never gone from theory to building as fast or as confidently as I did with them. Brilliantly structured! This was fun!!)
 
 
 ## Summary of Analysis/Insights
