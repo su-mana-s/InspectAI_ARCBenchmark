@@ -1,5 +1,6 @@
 ## The What
 Evaluations on The ARC Challenge Benchmark With The Inspect Library
+- If the nb does not render, see - [nbviewer](https://nbviewer.org/github/su-mana-s/InspectAI_ARCBenchmark/blob/main/AlgoVerseBenchmarkingChallenge.ipynb)
 - The project analyses the performance of GPT models on the ARC challenge bench, constructing an Inspect eval pipeline, complete with custom solvers and scorers for multiple eval paradigms.
 - Logprobs extraction from model responses to calculate confidence scores and further logprobs-based scoring are implemented
 
